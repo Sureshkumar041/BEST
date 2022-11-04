@@ -1,0 +1,33 @@
+body{
+    background-color: lightpink;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#maindiv{
+    width: 35%;
+    height: 95vh;
+    margin-right: 5%;
+    background-color: white;
+}
+h4{
+    text-align: center;
+}
+.formdiv{
+    height: fit-content;
+}
+/* p{
+    visibility: visible;
+    color: red;
+    position: absolute;
+} */
+p{
+    /* visibility: visible; */
+    color: red;
+}
+
+input:focus p{
+    visibility: hidden;
+}

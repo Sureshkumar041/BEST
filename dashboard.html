@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+
+<body>
+    <div class="row text-white bg-dark">
+        <div class="col-9"></div>
+        <div class="col-3 text-center" id="text">
+            <p id="userdetail">User Name</p>
+            <p id="usertype">User Type</p>
+        </div>
+    </div>
+    <div class="row h-75">
+        <div class="col-3 text-white  h-80 text-center cursor-pointer">
+            <div class="row navbar">
+                <a class="navbar-brand w-100 hover-red" href="#" onclick="onShow()">User Details</a>
+            </div>
+            <div class="row navbar">
+                <a class="navbar-brand w-100" href="#" onclick="onSearchbar()">Search</a>
+            </div>
+            <div class="row navbar">
+                <a class="navbar-brand w-100" href="#">Report</a>
+            </div>
+            <div class="row navbar">
+                <a class="navbar-brand w-100" href="#">Administration</a>
+            </div>
+        </div>
+        <div class="col-9 bg-white text-black px-5">
+            <div class="row  my-5">
+                <div class="col">
+                    <input type="text" name=""  class="form-control w-100 px-2 rounded-pill border-primary" id="emailsearch" placeholder="example@gmail.com">
+                </div>
+                <div class="col">
+                    <input type="text" name="" class="form-control w-100 px-2 rounded-pill border-primary" id="nosearch" placeholder="mobile number">
+                </div>
+                <div class="col">
+                    <input type="button" class="btn btn-outline-primary w-100 rounded-pill" onclick="onSearch()" id="invalid" value="Search">
+                    <p></p>
+                </div>
+            </div>
+            <table class="table-bordered col-12 text-center" id="table">
+                <thead>
+                    <th id="id">User Id</th>
+                    <th>Email</th>
+                    <th>User Name</th>
+                    <th>Mobile Number</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+            <!-- <div class="mt-5 tableshow">
+                <ul class="pagination position-absolute top-75 mt-3" id="pagemove">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul> -->
+              <div id="pagination"><p id="st">sss</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="action">
+        <form action="" id="updateform" class="w-50 position-fixed py-4">
+            <div class="form-group px-4">
+                <label for="" class="p-2">Email</label>
+                <input type="text" class="form-control" id="email">
+                <p></p>
+            </div>
+            <div class="form-group px-4">
+                <label for="" class="p-2">User Name</label>
+                <input type="text" class="form-control" id="username">
+                <p></p>
+            </div>
+            <div class="form-group px-4">
+                <label for="" class="p-2">Mobile Number</label>
+                <input type="text" class="form-control" id="phno">
+                <p></p>
+            </div>
+            <div class="row w-75 mx-4 py-3">
+                <button class="col btn btn-secondary mx-5" onclick="onHidden()">Cancel</button>
+                <button class="col btn btn-success" onclick="onUpdate()">Update</button>
+            </div>
+        </form>
+    </div>
+    <div class="" id="divtable">
+        <!-- <p class="text-center py-3">Matched Data</p> -->
+        <table class="table-bordered w-100 px-5" id="searchtable">
+            <thead>
+                <th>User Id</th>
+                <th>Email</th>
+                <th>User Name</th>
+                <th>Mobile Number</th>
+                <th>Action</th>
+            </thead>
+        </table>
+    </div>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
