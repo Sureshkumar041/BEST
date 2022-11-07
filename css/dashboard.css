@@ -7,9 +7,10 @@ body{
     background-color: palevioletred;
 }
 
-table{
+/* table{
     visibility: hidden;
-}
+} */
+
 #action{
     width: 70%;
     height: 60vh;
@@ -51,8 +52,4 @@ table{
 
 #searchbar{
     display: none;
-}
-
-#pagination #st{
-    position: fixed;
 }
