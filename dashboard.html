@@ -23,7 +23,7 @@
     <div class="row h-75">
         <div class="col-3 text-white  h-80 text-center cursor-pointer">
             <div class="row navbar">
-                <a class="navbar-brand w-100 hover-red" href="#" onclick="onShow()">User Details</a>
+                <a class="navbar-brand w-100 hover-red" href="javascript:onShow()">User Details</a>
             </div>
             <div class="row navbar">
                 <a class="navbar-brand w-100" href="#" onclick="onSearchbar()">Search</a>
@@ -35,15 +35,15 @@
                 <a class="navbar-brand w-100" href="#">Administration</a>
             </div>
         </div>
-        <div class="col-9 bg-white text-black px-5">
+        <div class="col-9 bg-white text-black px-5" id="contentshow">
             <div class="row  my-5">
-                <div class="col">
+                <div class="col searchinput" id="searchinputemail">
                     <input type="text" name="" class="form-control w-100 px-2 rounded-pill border-primary"
                         id="emailsearch" onkeyup="onSearch()" placeholder="example@gmail.com">
                 </div>
-                <div class="col">
+                <div class="col searchinput" id="searchinputno">
                     <input type="text" name="" class="form-control w-100 px-2 rounded-pill border-primary" id="nosearch"
-                        placeholder="mobile number">
+                    onkeyup="onSearch()"  placeholder="mobile number">
                 </div>
                 <div class="col">
                     <input type="button" class="btn btn-outline-primary w-100 rounded-pill" onclick="onSearch()"
@@ -61,7 +61,7 @@
                 </thead>
                 <tbody id="tbody"></tbody>
             </table>
-            <div>
+            <div id="pagination">
                 <ul class="pagination mt-3">
                     <li class="page-item prev"><a class="page-link" href="#">Previous</a></li>
                     <!-- <li class="page-item"><a class="page-link bg-dark text-white" href="#">1</a></li>
